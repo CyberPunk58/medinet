@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'knowledge_base',
-    'django_ckeditor-5',
+    'django_ckeditor_5',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +126,28 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+CKEDITOR_5_CONFIGS = {
+    'default': {
+        'toolbar': [
+            'heading', '|',
+            'bold', 'italic', 'link',
+            'bulletedList', 'numberedList',
+            'blockQuote', 'imageUpload',
+        ],
+    },
+    'extends': {
+        'toolbar': [
+            'heading', '|',
+            'bold', 'italic', 'underline',
+            'link',
+            'bulletedList',
+            'numberedList',
+            'blockQuote',
+            'insertTable',
+            'imageUpload',
+            'undo',
+            'redo',
+        ],
+    },
+}
